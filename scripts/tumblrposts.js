@@ -112,7 +112,8 @@ var TumblrPosts = function(option){
 			url : this.option.url,
 			data : {
 				start : this.offset,
-				num : this.step
+				num : this.step,
+                filter : "none"
 			},
 			dataType : "jsonp",
 			success : $.proxy(this.run, this)

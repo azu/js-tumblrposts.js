@@ -1,0 +1,30 @@
+{
+  "name": "js-tumblrposts.js",
+  "version": "0.0.0",
+  "description": "Tumblrのタグ一覧および投稿一覧を取得する為のライブラリです。",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "grunt": "~0.4.2"
+  },
+  "devDependencies": {
+    "gulp-concat": "~2.1.7",
+    "gulp-uglify": "~0.2.1",
+    "gulp": "~3.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mach3/js-tumblrposts.js"
+  },
+  "author": "azu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mach3/js-tumblrposts.js/issues"
+  },
+  "homepage": "https://github.com/mach3/js-tumblrposts.js"
+}
