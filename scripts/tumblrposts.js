@@ -20,12 +20,12 @@ var TumblrPosts = function(option){
 		url : "/api/read/json/",
 		restPath : "/api/read/json/",
 		domain : null,
-		maxNum : 0
+		maxNum : 0,
+        step : 50
 	};
 
 	fn.$ = null;
 	fn.offset = 0;
-	fn.step = 50;
 	fn.posts = [];
 	fn.tags = [];
 
@@ -104,7 +104,7 @@ var TumblrPosts = function(option){
 				this.trigger(this.EVENT_COMPLETE);
 				return;
 			}
-			this.offset += this.step;
+			this.offset += this.config("step");
 			this.trigger(this.EVENT_PROGRESS);
 		}
 
@@ -112,8 +112,7 @@ var TumblrPosts = function(option){
 			url : this.option.url,
 			data : {
 				start : this.offset,
-				num : this.step,
-                filter : "none"
+				num : this.config("step")
 			},
 			dataType : "jsonp",
 			success : $.proxy(this.run, this)
